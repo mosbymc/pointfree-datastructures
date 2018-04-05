@@ -30,8 +30,7 @@ module.exports = function _wallaby(wallaby) {
             { pattern: 'test/testData.js', load: true },
             '!test/**/*.spec.js',
             '!playground.js',
-            '!test/test_helper.js',
-            '!./observations.js'
+            '!test/test_helper.js'
         ],
 
         /*
@@ -48,7 +47,7 @@ module.exports = function _wallaby(wallaby) {
          filesWithNoCoverageCalculated: turns off code coverage reporting in the wallaby application, but leave it on
          inside the IDE so that I can maintain in-line errors with selected files
          */
-        filesWithNoCoverageCalculated: ['src/expressionParser/expressionParser.js', 'test/testData.js'],
+        filesWithNoCoverageCalculated: ['test/testData.js'],
 
         /*
          compilers: wallaby ships with three built-in compilers: typescript, coffeescript, and babel; files

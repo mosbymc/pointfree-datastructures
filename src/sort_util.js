@@ -1,3 +1,5 @@
+import { sortDirection } from './util';
+
 let lengthOfItemsToSort = (items) => !items.length;
 let keyComparison = (items, comparer, selector, direction, item) => 0 === comparer(selector(items[0]), selector(item), direction);
 

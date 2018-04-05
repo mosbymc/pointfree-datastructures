@@ -335,6 +335,27 @@ var strictEquals = curry((x, y) => x === y);
 var type = a => typeof a;
 
 /**
+ * @description Contains the list of all JavaScript types
+ * @enum {string}
+ */
+var typeNames = {
+    /** boolean */
+    'boolean': typeof true,
+    /** function */
+    'function': typeof Function,
+    /** number */
+    'number': typeof 0,
+    /** object */
+    'object': typeof{ a: 1 },
+    /** string */
+    'string': typeof'',
+    /** symbol */
+    'symbol': typeof Symbol.iterator,
+    /** undefined */
+    'undefined': typeof void 0
+};
+
+/**
  * @signature unfoldWith :: () -> * -> []
  * @description d
  * @note This function is partially applied, not curried.
@@ -377,4 +398,4 @@ var wrap = data => [data];
 
 
 export { cacher, compose, constant, curry, defaultPredicate, delegatesFrom, delegatesTo, generatorProto, identity,
-        ifElse, invoke, isArray, isString, javaScriptTypes, noop, not, once, sortDirection, strictEquals, type, unfoldWith, when, wrap };
+        ifElse, invoke, isArray, isString, javaScriptTypes, noop, not, once, sortDirection, strictEquals, type, typeNames, unfoldWith, when, wrap };
